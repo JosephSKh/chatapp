@@ -1,0 +1,6 @@
+<app-message *ngFor="let item of list" [username]="item.username" [body]="item.body"></app-message>
+<form (submit)="sendMessage(myUsername, myMessage)">
+  <input type="text" required="true" [(ngModel)]="myUsername" name="username" placeholder="Please enter your username" />
+  <input type="text" required="true" [(ngModel)]="myMessage" name="message" placeholder="Please type something ..." />
+  <input id="SendBtn"  type="submit" value="Send" />
+</form>
